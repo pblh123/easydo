@@ -64,14 +64,16 @@ shanghaiL2.append(elem3)
 AL2.append(elem4)
 BL2.append(elem5)
 df = pd.DataFrame({
-    "日期": dataL,
-    "上海市場 换手率(%)": shanghaiL,
-    "A股 换手率(%)": AL,
-    "B股 换手率(%)": BL,
-    "上海市場 平均市盈率": shanghaiL2,
-    "A股 平均市盈率": AL2,
-    "B股 平均市盈率": BL2
+    "Date": dataL,
+    "SHTurnOver": shanghaiL,
+    "ATurnOver": AL,
+    "BTurnOver": BL,
+    "SHPE": shanghaiL2,
+    "APE": AL2,
+    "BPE": BL2
 })
+
+df = df[["Date", "SHTurnOver", "ATurnOver", "BTurnOver", "SHPE", "APE", "BPE"]]
 print(df)
 # 初始化入庫模塊并數據入庫
 inmysql = mysql.sql()
