@@ -198,12 +198,13 @@ if __name__ == '__main__':
 #    print(price)
     
 #    #获取指定一天的收盘价
-    price = get_close_price('600660','20170209') 
-    print(price)
+#    price = get_close_price('600660','20170209') 
+#    print(price)
 #    
 #    #获取从start_day开始直到昨天的收盘价
 #    s = get_period_price('600660',start_day)
-#    print(s)
+    s = get_period_k_day('600660',start_day)
+    print(s)
 #    
 #    #获取指定时间段内的收盘价
 #    s = get_period_k_day('601012',start_day,stop_day)
@@ -211,8 +212,8 @@ if __name__ == '__main__':
 #    s.to_csv('test.csv', encoding= 'gbk') 
     
     #更新K线数据并存文档
-    company_list = ['600660', '600066', '000651', '600522', '601012', '600887']
-    k_day_update(company_list)
-    k_day_update('600066')
+#    company_list = ['600660', '600066', '000651', '600522', '601012', '600887']
+#    k_day_update(company_list)
+#    k_day_update('600066')
     
     
