@@ -21,7 +21,7 @@ class data:
     获取一段时间内的指数
     ''' 
     def get_index_data(self,id):
-        api = ts.pro_api('2dbe42e7773b4591a74a07d19a30f3f7d9a663f2023f27f6e38dfde1')
+        api = ts.pro_api('dbc6483be88b981e2445a2f20e8c6e8566b59191646f054345247bc0')
         a = []
         for i in range(1990,2030,5):
             print(i)
@@ -158,11 +158,16 @@ if __name__ == '__main__':
     sys.path.append(DATA_DIR)
     
     data = data()
-    print(data.get_index_data("000001.SH"))
 
-'''
-   print("盈利能力")
-    print(data.get_profit_data(2018,2))
+
+ #   print(data.get_index_data("000001.SH"))
+
+
+    print("盈利能力")
+    t = data.get_profit_data(2000,4)
+    print(t)
+    print(t.columns)
+"""
     print("营运")
     print(data.get_operation_data(2018,2))
     print("成长")
@@ -171,7 +176,7 @@ if __name__ == '__main__':
     print(data.get_debtpaying_data(2018,2))
     print("现金流")
     print(data.get_cashflow_data(2018,2))
-'''
+"""
 
 
 
